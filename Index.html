@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        
+        #prevBtn,
+        #nextBtn {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        var images = ['./imagenes/fortnite1.jpg', './imagenes/imagen2.jpg', './imagenes/imagen3.jpg'];
+        var currentIndex = 0;
+
+        function showImage(index) {
+            var img = document.getElementById('carousel');
+            img.src = images[index];
+        }
+
+        function next() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>RAREZA DE ARMAS EN FORTNITE</h1>
+
+    <a href="https://www.epicgames.com/site/es-ES/home" target="_blank">
+        <img id="carousel" src="./imagenes/fortnite1.jpg" alt="Ejemplo de Imagen" style="display: block; margin: 0 auto; width: 50%; border: 2px solid black; border-radius: 10px; padding: 10px;">
+    </a>
+
+    <button id="prevBtn" onclick="prev()">Anterior</button>
+    <button id="nextBtn" onclick="next()">Siguiente</button>
+
+
+    <div class="imagen-input">
+        <h3>Que las diferencia?</h3>
+        <p>En Fortnite, las diferencias entre los distintos niveles de rareza, representados por los colores gris, verde, azul, morado y naranja, se relacionan con la potencia y las características de las armas y otros objetos en el juego. Aquí hay una descripción general de lo que generalmente se puede esperar de cada nivel de rareza:</p>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="./imagenes/escopeta_verde.jpg" alt="Imagen 1" style="width: 200px; height: 200px;">
+            <p>Verde (Poco común): Las armas poco comunes suelen tener un poco más de potencia y posiblemente algunas características adicionales en comparación con las armas comunes. Aunque no son las más fuertes, pueden ser útiles en las primeras etapas del juego.</p>
+        </div>
+        <div>
+            <img src="./imagenes/escopeta_azul.jpg" alt="Imagen 2" style="width: 200px; height: 200px;">
+            <p>Azul (Raro): Las armas raras son más poderosas que las comunes y poco comunes, y suelen tener características especiales que las hacen más efectivas en combate. Son menos comunes que las anteriores y pueden marcar una diferencia significativa durante el juego.</p>
+        </div>
+        <div>
+            <img src="./imagenes/escopeta_morada.jpg" alt="Imagen 3" style="width: 200px; height: 200px;">
+            <p>Morado (Épico): Las armas épicas suelen ser considerablemente más fuertes que las armas de rareza inferior y a menudo tienen características únicas que las hacen especialmente efectivas en situaciones específicas. Estas armas son menos comunes que las anteriores y pueden marcar una gran diferencia en la jugabilidad.</p>
+        </div>
+        <div>
+            <img src="./imagenes/escopeta_dorada.jpg" alt="Imagen 4" style="width: 200px; height: 200px;">
+            <p>Naranja (Legendario): Las armas legendarias son algunas de las más poderosas en el juego y a menudo tienen características únicas y altamente efectivas que las distinguen de las de rareza inferior. Estas armas son muy raras y pueden marcar una gran diferencia en la victoria final de un jugador.</p>
+        </div>
+    </div>
+
+    <div class="contacto">
+        <h2>Contacto</h2>
+
+        <input type="text" id="whatsapp" name="whatsapp" value="TELEFONO: 3213248954" readonly><br><br>
+        <input type="text" id="facebook" name="facebook" value="Pepito Perez" readonly><br><br>
+        <input type="text" id="instagram" name="instagram" value="lll_pepix_" readonly><br><br>
+        <input type="text" id="correo" name="correo" value="pepitojajas@outlook.com" readonly><br><br>
+    </div>
+
+    <script src="Script.js"></script>
+
+</body>
+
+</html>

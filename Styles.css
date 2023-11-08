@@ -1,0 +1,75 @@
+body {
+    background-image: url('./imagenes/fondofort.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.imagen-input {
+    text-align: center;
+    margin-top: 20px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#imagen {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container div {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.contacto {
+    text-align: center;
+    margin-top: 20px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.contacto input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
